@@ -24,6 +24,9 @@ RUN COMPOSER_HOME="/composer" composer global require --prefer-dist --no-progres
 # Install vimeo/psalm
 RUN COMPOSER_HOME="/composer" composer global require --prefer-dist --no-progress --dev vimeo/psalm
 
+# Install phpstan/phpstan-shim
+RUN COMPOSER_HOME="/composer" composer global require --prefer-dist --no-progress --dev phpstan/phpstan-shim
+
 WORKDIR "/app"
 
 CMD ["ls", "-lah", "/composer/vendor/bin/"]
